@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #container {
+            width: 1920px;
+            height: 1080px;
+            background: deepskyblue;
+            position: relative;
+        }
+        #box {
+            width: 200px;
+            height: 200px;
+            background: red;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+        <img id="box" src="a.jpg">
+    <script src="move.js">
+        let tanggiam = 1;
+        let pos = 0;
+        let box = document.getElementById("box");
+        let t = setInterval(move, 10);
+
+        function move() {
+        if ((pos > 1300) || (pos <0)) {
+        tanggiam = (-tanggiam);
+        }
+
+        pos += tanggiam;
+        box.style.left = pos+"px";
+
+    }
+    move()
+</script>
+
+</body>
+</html>
+<script>
+    let tanggiam = 1;
+    let pos = 0;
+    let box = document.getElementById("box");
+    let t = setInterval(move, 10);
+
+    function move() {
+        if ((pos > 1300) || (pos <0)) {
+            tanggiam = (-tanggiam);
+        }
+
+        pos += tanggiam;
+        box.style.left = pos+"px";
+
+    }
+</script>
